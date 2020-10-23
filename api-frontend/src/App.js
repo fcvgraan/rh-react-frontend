@@ -13,7 +13,6 @@ class App extends Component {
     fetch('https://europe-west2-runninghill.cloudfunctions.net/nodejs-mongodb-atlas-api',
       {
         method: 'POST',
-        mode: 'cors',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -22,7 +21,6 @@ class App extends Component {
       })
       .then(res => res.json())
       .then((data) => {
-        console.log(data);
         this.setState({ types: data })
       })
       .catch(console.log)
