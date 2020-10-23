@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Types from './components/types';
+import Verbs from './components/verbs';
 
 class App extends Component {
 
   state = {
-    types: []
+    types: [],
+    verbs: []
   }
-
-
-
+  
   componentDidMount() {
     fetch('https://europe-west2-runninghill.cloudfunctions.net/nodejs-mongodb-atlas-api',
       {
